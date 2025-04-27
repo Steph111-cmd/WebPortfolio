@@ -5,6 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Quizzes</title>
   <link rel="stylesheet" href="../style.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: linear-gradient(
+        135deg,
+        #0f2027 25%,
+        #203a43 25%,
+        #203a43 50%,
+        #2c5364 50%,
+        #2c5364 75%,
+        #0f2027 75%
+      );
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+  
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
 </head>
 <body>
     <section id="header">
@@ -32,7 +58,6 @@
     </section>
 
     <section id="quizzes" class="container">
-      <h1 class="section-title">My Quizzes</h1>
         <div class="quiz-list">
             <div class="quiz-item">
                 <h2>Quiz 1</h2>
@@ -54,7 +79,16 @@
           <h2>Quiz 5</h2>
           <a href="./quiz5.pdf" download class="btn">View Quiz 5</a>
       </div>
+      <div class="quiz-item">
+        <h2>Quiz 6</h2>
+        <a href="./quiz6.pdf" download class="btn">View Quiz 6</a>
+    </div>
+    <div class="quiz-item">
+      <h2>Midterm Exam</h2>
+      <a href="./Midterm_Exam.pdf" download class="btn">View Midterm Exam</a>
+  </div>
         </div>
     </section>
+    <script src="../app.js"></script>
 </body>
 </html>

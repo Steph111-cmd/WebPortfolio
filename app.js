@@ -10,9 +10,18 @@ hamburger.addEventListener('click', () => {
 });
 
 document.addEventListener('scroll', () => {
-	var scroll_position = window.scrollY;
-	header.style.backgroundColor = scroll_position > 250 ? '#29323c' : 'transparent';
+	const scroll_position = window.scrollY;
+
+	// Use #29323c when scrolled down,rgb(121, 127, 133) when at top
+	if (scroll_position > 50) {
+		header.style.backgroundColor = '#29323c';
+	} else {
+		header.style.backgroundColor = 'rgba(82, 84, 85, 0.8)';
+	}
 });
+const projectButtons = document.querySelectorAll('.project-btn');
+
+
 
 menu_item.forEach((item) => {
 	item.addEventListener('click', () => {
